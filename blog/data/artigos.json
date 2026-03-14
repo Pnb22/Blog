@@ -1,7 +1,10 @@
 [
   {
-    "slug": "exemplo-artigo",
-    "title": "Exemplo de Artigo",
-    "content": "Este é um artigo de exemplo."
+    "slug": "primeiro-artigo",
+    "titulo": "Primeiro artigo",
+    "descricao": "Descrição do artigo",
+    "autor": "Arthur",
+    "data": "2026-03-14",
+    "conteudo": "Conteúdo do artigo"
   }
 ]

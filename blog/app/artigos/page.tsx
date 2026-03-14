@@ -8,10 +8,10 @@ export default function Home() {
 
       {artigos.map((artigo) => (
         <div key={artigo.slug}>
-          <h2>{artigo.title}</h2>
-          <p>{artigo.description}</p>
+          <h2>{artigo.titulo}</h2>
+          <p>{artigo.descricao}</p>
 
-          <Link href={`/artigo/${artigo.slug}`}>
+          <Link href={`/artigos/${artigo.slug}`}>
             Ler artigo
           </Link>
         </div>
