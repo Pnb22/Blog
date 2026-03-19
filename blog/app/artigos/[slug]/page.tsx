@@ -1,45 +1,51 @@
-import artigosData from "@/data/artigos.json"
-import { notFound } from "next/navigation"
+import styles from "./artigo.module.css";
+import { notFound } from "next/navigation";
 
-type Artigo = {
-  slug: string
-  titulo: string
-  descricao: string
-  autor: string
-  data: string
-  conteudo: string
+async function getArtigos() {
+  const data = await import("../../data/artigos.json");
+  return data.default;
 }
-
-const artigos = artigosData as unknown as Artigo[]
 
 export async function generateStaticParams() {
-  return artigos.map((artigo) => ({
-    slug: artigo.slug
-  }))
+  const artigos = await getArtigos();
+
+  return artigos.map((artigo: any) => ({
+    slug: artigo.slug,
+  }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const artigo = artigos.find((a) => a.slug === params.slug)
+export async function generateMetadata({ params }: any) {
+  const artigos = await getArtigos();
+  const artigo = artigos.find((a: any) => a.slug === params.slug);
 
   return {
     title: artigo?.titulo,
-    description: artigo?.descricao
-  }
+    description: artigo?.descricao,
+  };
 }
 
-export default function Artigo({ params }: { params: { slug: string } }) {
-  const artigo = artigos.find((a) => a.slug === params.slug)
+export default async function Artigo({ params }: any) {
+  const artigos = await getArtigos();
+  const artigo = artigos.find((a: any) => a.slug === params.slug);
 
-  if (!artigo) {
-    notFound()
-  }
+  if (!artigo) return notFound();
 
   return (
-    <article>
+    <main className={styles.container}>
       <h1>{artigo.titulo}</h1>
-      <p>Autor: {artigo.autor}</p>
-      <p>Data: {artigo.data}</p>
-      <p>{artigo.conteudo}</p>
-    </article>
-  )
+
+      <p><strong>Autor:</strong> {artigo.autor}</p>
+      <p><strong>Data:</strong> {artigo.data}</p>
+
+      <div className={styles.content}>
+        <p>{artigo.conteudo}</p>
+
+        <img
+          src="https://source.unsplash.com/400x300/?paris"
+          alt="imagem viagem"
+          className={styles.image}
+        />
+      </div>
+    </main>
+  );
 }
