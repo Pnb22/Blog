@@ -5,7 +5,8 @@
     "autor": "Arthur",
     "data": "2026-03-18",
     "descricao": "Descubra os encantos de Paris",
-    "conteudo": "Paris é conhecida como a cidade do amor. Visite a Torre Eiffel, museus e cafés incríveis."
+    "conteudo": "Paris é conhecida como a cidade do amor. Visite a Torre Eiffel, museus e cafés incríveis.",
+    "imagem": "https://images.unsplash.com/photo-1520012218363-1f43ee093f55?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "slug": "tokyo-aventura",
@@ -13,6 +14,25 @@
     "autor": "Arthur",
     "data": "2026-03-17",
     "descricao": "Explore a cultura japonesa",
-    "conteudo": "Tokyo mistura tradição e tecnologia. Conheça templos, anime e gastronomia única."
+    "conteudo": "Tokyo mistura tradição e tecnologia. Conheça templos, anime e gastronomia única.",
+    "imagem": "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "slug": "roma-expedicao",
+    "titulo": "Expedição a Roma",
+    "autor": "Arthur",
+    "data": "2026-03-16",
+    "descricao": "Viva a história no coração da Itália",
+    "conteudo": "Ruínas antigas, gastronomia incomparável e arte majestosa. Explore o Coliseu, o Vaticano e as ruas charmosas de Roma.",
+    "imagem": "https://images.unsplash.com/photo-1582719478149-39c681534b0b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "slug": "nova-york-urban",
+    "titulo": "Nova York Urbana",
+    "autor": "Arthur",
+    "data": "2026-03-15",
+    "descricao": "Sinta o ritmo da cidade que nunca dorme",
+    "conteudo": "Do Central Park aos altos arranha-céus, Nova York oferece um mix de culturas, shows, compras e gastronomia mundial.",
+    "imagem": "https://images.unsplash.com/photo-1549921296-3a7f1b2f4829?auto=format&fit=crop&w=1200&q=80"
   }
 ]
